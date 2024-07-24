@@ -29,7 +29,7 @@ const ProductList: React.FC<ProductListProps> = ({ tiposProduto, produtos, filtr
                 <div>
                     {tiposProduto.map(item => (
                         <div key={item.id} className="categoria flex-col bg-gray-100 p-4 mb-2">
-                            <div>{item.descricao}</div>
+                            <div className="font-bold text-xl">{item.descricao}</div>
                             <div className="ml-4 flex flex-wrap items-center justify-evenly">
                                 {
                                     produtos
@@ -41,7 +41,7 @@ const ProductList: React.FC<ProductListProps> = ({ tiposProduto, produtos, filtr
                                                     <Card className="w-60 p-0 m-0">
                                                         <CardHeader className="items-center w-full p-0 m-0">
                                                             <img
-                                                                className="w-full"
+                                                                className="w-32"
                                                                 src={getFoto(produtoFiltrado.descricao)}
                                                                 alt="Image" />
                                                         </CardHeader>
@@ -49,19 +49,18 @@ const ProductList: React.FC<ProductListProps> = ({ tiposProduto, produtos, filtr
                                                             {produtoFiltrado.descricao}
                                                         </CardContent>
                                                         <CardFooter className="flex-col gap-1 items-center justify-center">
+                                                            <div className="font-semibold text-xl text-center">
+                                                                Valor no kit: {formataValorEmRealBrasileiro(produtoFiltrado.valor)}
+                                                            </div>
                                                             {
                                                                 produtoFiltrado.valorIndividual ?
-                                                                    <div className="text">
-                                                                        <span className="font-semibold text-xl text-center">
-                                                                            {formataValorEmRealBrasileiro(produtoFiltrado.valorIndividual)}
+                                                                    <div className="text-center">
+                                                                        <span>
+                                                                            Valor individual: {formataValorEmRealBrasileiro(produtoFiltrado.valorIndividual)}
                                                                         </span>
                                                                     </div>
                                                                     : <></>
                                                             }
-
-                                                            <div className="text-center">
-                                                                Valor no kit: {formataValorEmRealBrasileiro(produtoFiltrado.valor)}
-                                                            </div>
                                                         </CardFooter>
                                                     </Card>
                                                 </a>

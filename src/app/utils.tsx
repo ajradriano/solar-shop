@@ -1,26 +1,26 @@
 export function getFoto(descricao: string): string {
-    const descricaoLowerCase = descricao.toLowerCase();
-    const descricaoMap: { [key: string]: string } = {
-        painel: '/painel-solar.jpg',
-        inversor: '/inversor-solar.jpg',
-        cabo: '/cabo-solar.jpg',
-        estrutura: '/estrutura-solar.jpg',
-        string: '/string-box-solar.jpg',
-        transformador: '/transformador-solar.jpg',
-        fuse: '/fusivel-solar.jpg',
-    };
+  const descricaoLowerCase = descricao.toLowerCase();
+  const descricaoMap: { [key: string]: string } = {
+    painel: '/painel-solar.jpg',
+    inversor: '/inversor-solar.jpg',
+    cabo: '/cabo-solar.jpg',
+    estrutura: '/estrutura-solar.jpg',
+    string: '/string-box-solar.jpg',
+    transformador: '/transformador-solar.jpg',
+    fuse: '/fusivel-solar.jpg',
+  };
 
-    for (const key in descricaoMap) {
-        if (descricaoLowerCase.includes(key)) {
-            return descricaoMap[key];
-        }
+  for (const key in descricaoMap) {
+    if (descricaoLowerCase.includes(key)) {
+      return descricaoMap[key];
     }
+  }
 
-    return '/nope-img.jpg';
+  return '/nope-img.jpg';
 }
 
 export function formataValorEmRealBrasileiro(valor: any) {
-    return valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+  return valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 }
 
 // CARRINHO DE COMPRAS

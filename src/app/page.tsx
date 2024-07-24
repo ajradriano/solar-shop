@@ -1,14 +1,14 @@
 'use client'
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import ProductList from '../components/ProductList'; // ajuste o caminho conforme necessário
 import produtos from '@/data/db';
-import { getFoto } from "./utils";
+import { getFoto, getCarrinho } from "./utils";
 
 export default function Home() {
   const [tipoSelecionado, setTipoSelecionado] = useState<number | null>(null);
   const [filtroTexto, setFiltroTexto] = useState<string>("");
-
+  let [itensCarrinho, setItensCarrinho] = useState<number>(0);
   const tipos = [
     { id: 1, descricao: 'Módulos' },
     { id: 2, descricao: 'Inversores' },
@@ -29,10 +29,17 @@ export default function Home() {
     ? tipos.filter(item => item.id === tipoSelecionado)
     : tipos;
 
+  useEffect(() => {
+    setItensCarrinho(getCarrinho().length);
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center bg-blue-200">
-      <div className="header w-screen h-12 p-2 text-white font-bold bg-sky-800 flex items-center">
-        Solar Shop
+      <div className="header w-screen h-12 p-4 text-white font-bold bg-sky-800 flex items-center justify-between">
+        <span>Solar Shop</span>
+        <a href="/carrinho">
+          <span className="me-10">Carrinho ({itensCarrinho} item(s))</span>
+        </a>
       </div>
       <div className="search flex h-22 m-4 gap-2 items-center justify-center">
         Filtro

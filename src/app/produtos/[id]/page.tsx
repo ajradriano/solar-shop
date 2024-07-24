@@ -1,8 +1,9 @@
 'use client'
-import { useParams } from "next/navigation";
+import { redirect, useParams } from "next/navigation";
 import produtos from '@/data/db'
 import { Button } from "@/components/ui/button"
 import { adicionarProdutoAoCarrinho, formataValorEmRealBrasileiro, getFoto } from "@/app/utils";
+import router from "next/router";
 
 export default function Produtos() {
     const param = useParams();
@@ -19,6 +20,9 @@ export default function Produtos() {
         <main>
             <div className="header w-screen h-12 p-2 text-white font-bold bg-sky-800 flex items-center">
                 Solar Shop
+            </div>
+            <div className="link-voltar flex-1 w-1/2 p-2">
+                <a href="/" className='hover:text-blue-700 hover:font-bold'>{'<-'} Voltar</a>
             </div>
             <div className="produto-detalhe flex items-center justify-center m-4">
                 <div className="produto-foto">
