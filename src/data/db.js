@@ -1,612 +1,906 @@
 const products = [
     {
-        descricao: "Paineis",
-        itens: [
-            {
-                descricao: "Painel Solar Ja Solar 550w Bifacial",
-                valor: " R$ 472,32 "
-            }
-        ]
+        id: 1,
+        descricao: "Painel Solar JA Solar 550W Bifacial",
+        valor: 472.32,
+        valorIndividual: null,
+        tipo: 1
     },
     {
-        descricao: "Inversores",
-        itens: [
-            {
-                descricao: "Inversor Fronius Primo 3kw Monof. 220v",
-                valor: " R$ 1.490,40 ",
-                valorIndividual: " R$ 1.905,59 "
-            },
-            {
-                descricao: "Inversor Fronius Primo 4kw Monof. 220v",
-                valor: " R$ 2.172,47 ",
-                valorIndividual: " R$ 2.777,66 "
-            },
-            {
-                descricao: "Inversor Fronius Primo 5kw Monof. 220v",
-                valor: " R$ 2.399,95 ",
-                valorIndividual: " R$ 3.068,51 "
-            },
-            {
-                descricao: "Inversor Fronius Primo 6kw Monof. 220v",
-                valor: " R$ 2.680,66 ",
-                valorIndividual: " R$ 3.427,43 "
-            },
-            {
-                descricao: "Inversor Fronius Primo 8,2kw Monof. 220v",
-                valor: " R$ 3.525,18 ",
-                valorIndividual: " R$ 4.507,21 "
-            },
-            {
-                descricao: "Inversor Fronius Symo Br 10kw Trif. 220v",
-                valor: " R$ 13.828,69 ",
-                valorIndividual: " R$ 17.681,02 "
-            },
-            {
-                descricao: "Inversor Fronius Symo Br 12kw Trif. 220v",
-                valor: " R$ 15.444,26 ",
-                valorIndividual: " R$ 19.746,66 "
-            },
-            {
-                descricao: "Inversor Fronius Symo Br 15kw Trif. 220v",
-                valor: " R$ 14.466,15 ",
-                valorIndividual: " R$ 18.496,07 "
-            },
-            {
-                descricao: "Inversor Fronius Symo 12,5kw Trif. 380v",
-                valor: " R$ 7.927,72 ",
-                valorIndividual: " R$ 10.136,19 "
-            },
-            {
-                descricao: "Inversor Fronius Symo 15kw Trif. 380v",
-                valor: " R$ 8.817,65 ",
-                valorIndividual: " R$ 11.274,04 "
-            },
-            {
-                descricao: "Inversor Fronius Symo 17,5kw Trif. 380v",
-                valor: " R$ 9.302,01 ",
-                valorIndividual: " R$ 11.893,33 "
-            },
-            {
-                descricao: "Inversor Fronius Symo 20kw Trif. 380v",
-                valor: " R$ 9.870,32 ",
-                valorIndividual: " R$ 12.619,95 "
-            },
-            {
-                descricao: "Inversor Fronius Eco 25kw Trif. 380v",
-                valor: " R$ 10.962,76 ",
-                valorIndividual: " R$ 14.016,72 "
-            },
-            {
-                descricao: "Inversor Fronius Eco Light 25kw Trif. 380v",
-                valor: " R$ 10.678,59 ",
-                valorIndividual: " R$ 13.653,38 "
-            },
-            {
-                descricao: "Inversor Fronius Eco 27kw Trif. 380v",
-                valor: " R$ 12.025,74 ",
-                valorIndividual: " R$ 15.375,81 "
-            },
-            {
-                descricao: "Inversor Fronius Eco Light 27kw Trif. 380v",
-                valor: " R$ 11.690,70 ",
-                valorIndividual: " R$ 14.947,44 "
-            },
-            {
-                descricao: "Inversor Fronius Kit Eco 75kw (eco 25 + 2 Eco 25 Light)",
-                valor: " R$ 32.319,93 ",
-                valorIndividual: " R$ 41.323,48 "
-            },
-            {
-                descricao: "Inversor Fronius Tauro Eco 50-3-D Trif 380v",
-                valor: " R$ 30.929,10 ",
-                valorIndividual: " R$ 39.545,19 "
-            },
-            {
-                descricao: "Inversor Fronius Tauro Eco 50-3-P Trif 380v",
-                valor: " R$ 28.792,75 ",
-                valorIndividual: " R$ 36.813,70 "
-            },
-            {
-                descricao: "Inversor Fronius Tauro Eco 100-3-D Trif 380v",
-                valor: " R$ 42.476,75 ",
-                valorIndividual: " R$ 54.309,73 "
-            },
-            {
-                descricao: "Inversor Fronius Tauro Eco 100-3-P Trif 380v",
-                valor: " R$ 38.502,26 ",
-                valorIndividual: " R$ 49.228,05 "
-            },
-            {
-                descricao: "Inversor Fronius Primo Gen24 3.0 Plus Monf. 220v",
-                valor: " R$ 10.334,17 ",
-                valorIndividual: " R$ 13.213,02 "
-            },
-            {
-                descricao: "Inversor Fronius Primo Gen24 4.0 Plus Monf. 220v",
-                valor: " R$ 11.111,24 ",
-                valorIndividual: " R$ 14.206,57 "
-            },
-            {
-                descricao: "Inversor Fronius Primo Gen24 5.0 Plus Monf. 220v",
-                valor: " R$ 12.549,98 ",
-                valorIndividual: " R$ 16.046,10 "
-            },
-            {
-                descricao: "Inversor Fronius Primo Gen24 6.0 Plus Monf. 220v",
-                valor: " R$ 13.931,44 ",
-                valorIndividual: " R$ 17.812,40 "
-            },
-            {
-                descricao: "Carregador Veicular Fronius Wattpilot Home 11 J 2,0",
-                valor: " R$ 5.780,92 ",
-                valorIndividual: " R$ 7.391,34 "
-            },
-            {
-                descricao: "Cabo De Carregado Veicular Fronius Tipo 2 2,5m",
-                valor: " R$ 2.035,76 ",
-                valorIndividual: " R$ 2.602,88 "
-            },
-            {
-                descricao: "Cabo De Carregado Veicular Fronius Tipo 2 5m",
-                valor: " R$ 1.813,60 ",
-                valorIndividual: " R$ 2.318,82 "
-            },
-            {
-                descricao: "Cabo De Carregado Veicular Fronius  Tipo 2 7,5m",
-                valor: " R$ 2.651,26 ",
-                valorIndividual: " R$ 3.389,83 "
-            },
-            {
-                descricao: "Suporte Cabo De Carregado Veicular Fronius (type 2 Wall Bracket)",
-                valor: " R$ 465,02 ",
-                valorIndividual: " R$ 594,56 "
-            },
-            {
-                descricao: "Tagns Rfid",
-                valor: " R$ 203,29 ",
-                valorIndividual: " R$ 259,92 "
-            },
-            {
-                descricao: "Mount Place Go 2,0",
-                valor: " R$ 213,27 ",
-                valorIndividual: " R$ 272,68 "
-            },
-            {
-                descricao: "Smart Meter Fronius 65a",
-                valor: " R$ 1.526,37 ",
-                valorIndividual: " R$ 1.951,59 "
-            },
-            {
-                descricao: "Smart Meter Fronius 5ka",
-                valor: " R$ 1.526,37 ",
-                valorIndividual: " R$ 1.951,59 "
-            },
-            {
-                descricao: "Inversor Sunways Monof. 220v Sts-3ktl-3",
-                valor: " R$ 2.514,52 ",
-                valorIndividual: " R$ 3.215,00 "
-            },
-            {
-                descricao: "Inversor Sunways Monof. 220v Sts-5ktl-P",
-                valor: " R$ 3.944,79 ",
-                valorIndividual: " R$ 5.043,71 "
-            },
-            {
-                descricao: "Inversor Sunways Monof. 220v Sts-8ktl",
-                valor: " R$ 5.421,20 ",
-                valorIndividual: " R$ 6.931,42 "
-            },
-            {
-                descricao: "Inversor Sunways Monof. 220v Sts-10ktl",
-                valor: " R$ 5.767,24 ",
-                valorIndividual: " R$ 7.373,85 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-15ktl-P",
-                valor: " R$ 9.112,23 ",
-                valorIndividual: " R$ 11.650,68 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-20ktl-P",
-                valor: " R$ 10.611,72 ",
-                valorIndividual: " R$ 13.567,88 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-25ktl-P",
-                valor: " R$ 10.957,75 ",
-                valorIndividual: " R$ 14.010,31 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-33ktl",
-                valor: " R$ 16.148,26 ",
-                valorIndividual: " R$ 20.646,77 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-50ktl-M",
-                valor: " R$ 18.455,16 ",
-                valorIndividual: " R$ 23.596,31 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-100ktl",
-                valor: " R$ 31.719,80 ",
-                valorIndividual: " R$ 40.556,16 "
-            },
-            {
-                descricao: "Inversor Sunways Trif. 380v Stt-125ktl-Hv",
-                valor: " R$ 34.026,70 ",
-                valorIndividual: " R$ 43.505,70 "
-            },
-            {
-                descricao: "Inversor Refusol Trif 380v 20kw / Trif.220v 11kw",
-                valor: " R$ 10.106,40 ",
-                valorIndividual: " R$ 12.921,79 "
-            },
-            {
-                descricao: "Inversor Refusol Trif 380v 25kw / Trif. 220v 13kv",
-                valor: " R$ 10.435,95 ",
-                valorIndividual: " R$ 13.343,15 "
-            },
-            {
-                descricao: "Inversor Refusol Trif 380v 33kw / Trif. 220v 17,1kw",
-                valor: " R$ 15.379,30 ",
-                valorIndividual: " R$ 19.663,59 "
-            },
-            {
-                descricao: "Inversor Refusol Trif 380v 50kw / Trif. 220v 26kw",
-                valor: " R$ 17.576,34 ",
-                valorIndividual: " R$ 22.472,68 "
-            }
-        ]
+        id: 2,
+        descricao: "Inversor Fronius Primo 3Kw Monof. 220V",
+        valor: 1490.40,
+        valorIndividual: 1905.59,
+        tipo: 2
     },
     {
-        descricao: "Estruturas",
-        itens: [
-            {
-                descricao: "Estrutura Romagnole  4 Placas Pratic Lite Telha Ondulada",
-                valor: " R$ 191,33 "
-            },
-            {
-                descricao: "Estrutura Romagnole  4 Placas Pratic Lite Telha Colonial",
-                valor: " R$ 284,93 "
-            },
-            {
-                descricao: "Estrutura Romagnole  4 Placas Pratic Lite Perfil 2,4 (2pares)",
-                valor: " R$ 228,49 "
-            },
-            {
-                descricao: "Estrutura Romagnole  4 Placas Pratic Lite Telha Metalica (perfil 55cm)",
-                valor: " R$ 192,71 "
-            },
-            {
-                descricao: "Estrutura Romagnole  4 Placas Pratic Lite Lage",
-                valor: " R$ 663,46 "
-            }
-        ]
+        id: 3,
+        descricao: "Inversor Fronius Primo 4Kw Monof. 220V",
+        valor: 2172.47,
+        valorIndividual: 2777.66,
+        tipo: 2
     },
     {
-        descricao: "Elétricos",
-        itens: [
-            {
-                descricao: "Cabo Solar",
-                itens: [
-                    {
-                        descricao: "Cabo Solar Cobrecon 4mm",
-                        valor: " R$ 5,83 "
-                    },
-                    {
-                        descricao: "Cabo Solar Cobrecom 6mm",
-                        valor: " R$ 6,32 "
-                    }
-                ]
-            },
-            {
-                descricao: "Conector Mc4",
-                itens: [
-                    {
-                        descricao: "Conector Mc-4 (par)",
-                        valor: "R$ 7,29 "
-                    }
-                ]
-            },
-            {
-                descricao: "Fusível (usar Para Fronius Eco E Symo Br15)",
-                itens: [
-                    {
-                        descricao: "Pv Fuse 15a 1000vdc",
-                        valor: "R$ 14,12 "
-                    },
-                    {
-                        descricao: "Pv Fuse 20a 1000vdc",
-                        valor: "R$ 17,00 "
-                    },
-                    {
-                        descricao: "Pv Fuse 30a 1000vdc",
-                        valor: "R$ 28,91 "
-                    }
-                ]
-            },
-            {
-                descricao: "String Box",
-                itens: [
-                    {
-                        descricao: "String Box Clamper 1e/1s",
-                        valor: "R$ 453,40 "
-                    },
-                    {
-                        descricao: "String Box Clamper 2e/1s",
-                        valor: "R$ 518,17 "
-                    },
-                    {
-                        descricao: "String Box Clamper 2e/2s",
-                        valor: "R$ 698,23 "
-                    },
-                    {
-                        descricao: "String Box Clamper 3e/1s",
-                        valor: "R$ 712,48 "
-                    },
-                    {
-                        descricao: "String Box Clamper 3e/3s",
-                        valor: "R$ 1.198,27 "
-                    },
-                    {
-                        descricao: "String Box Clamper 4e/2s",
-                        valor: "R$ 770,78 "
-                    },
-                    {
-                        descricao: "String Box Proauto 4e/4s",
-                        valor: "R$ 1.573,94 "
-                    },
-                    {
-                        descricao: "String Box Clamper 6e/2s",
-                        valor: "R$ 1.781,21 "
-                    },
-                    {
-                        descricao: "String Box Proauto 6/6s",
-                        valor: "R$ 1.434,53 "
-                    },
-                    {
-                        descricao: "String Box Proauto 8e/2s 2x50a 1005vdc (para Tauro)",
-                        valor: "R$ 1.973,97 "
-                    },
-                    {
-                        descricao: "String Box Proauto 10e/10s",
-                        valor: "R$ 2.160,74 "
-                    },
-                    {
-                        descricao: "String Box Proauto 14e/1-2s 400a 1010vdc (para Tauro)",
-                        valor: "R$ 6.136,07 "
-                    },
-                    {
-                        descricao: "String Box Proauto 20e/20s 10mppt 20a 1040vdc P/ Sunways 100 E 125",
-                        valor: "R$ 4.032,75 "
-                    },
-                    {
-                        descricao: "String Box Proauto 8-4e/8-4s 4mppt 20a P/ Sunways 33 E 50",
-                        valor: "R$ 2.096,35 "
-                    }
-                ]
-            },
-            {
-                descricao: "Transformador",
-                itens: [
-                    {
-                        descricao: "Auto Transformador Polux 10 Kva Ip23",
-                        valor: " R$ 3.147,15 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 15 Kva Ip23",
-                        valor: " R$ 3.498,44 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 20 Kva Ip23",
-                        valor: " R$ 4.556,95 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 25 Kva Ip23",
-                        valor: " R$ 5.251,80 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 30 Kva Ip23",
-                        valor: " R$ 5.513,61 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 35 Kva Ip23",
-                        valor: " R$ 5.637,29 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 40 Kva Ip23",
-                        valor: " R$ 6.378,77 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 45 Kva Ip23",
-                        valor: " R$ 6.414,26 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 50 Kva Ip23",
-                        valor: " R$ 6.622,26 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 55 Kva Ip23",
-                        valor: " R$ 8.092,36 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 60 Kva Ip23",
-                        valor: " R$ 8.354,19 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 65 Kva Ip23",
-                        valor: " R$ 8.908,53 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 70 Kva Ip23",
-                        valor: " R$ 8.879,90 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 75 Kva Ip23",
-                        valor: " R$ 9.574,76 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 80 Kva Ip23",
-                        valor: " R$ 9.606,68 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 85 Kva Ip23",
-                        valor: " R$ 10.166,12 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 90 Kva Ip23",
-                        valor: " R$ 10.617,79 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 95 Kva Ip23",
-                        valor: " R$ 11.137,61 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 100 Kva Ip23",
-                        valor: " R$ 12.387,38 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 110 Kva Ip23",
-                        valor: " R$ 12.733,53 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 112,5kva Ip23",
-                        valor: " R$ 12.891,85 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 120 Kva Ip23",
-                        valor: " R$ 13.206,82 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 130 Kva Ip23",
-                        valor: " R$ 14.494,51 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 140 Kva Ip23",
-                        valor: " R$ 15.707,69 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 150 Kva Ip23",
-                        valor: " R$ 16.359,86 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 200 Kva Ip23",
-                        valor: " R$ 19.803,37 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 300 Kva Ip23",
-                        valor: " R$ 28.317,84 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 10 Kva Ip55",
-                        valor: " R$ 4.006,87 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 15 Kva Ip55",
-                        valor: " R$ 4.595,13 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 20 Kva Ip55",
-                        valor: " R$ 5.490,84 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 25 Kva Ip55",
-                        valor: " R$ 5.822,13 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 30 Kva Ip55",
-                        valor: " R$ 6.257,27 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 35 Kva Ip55",
-                        valor: " R$ 8.632,66 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 40 Kva Ip55",
-                        valor: " R$ 10.343,41 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 45 Kva Ip55",
-                        valor: " R$ 10.817,57 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 50 Kva Ip55",
-                        valor: " R$ 11.197,64 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 55 Kva Ip55",
-                        valor: " R$ 11.523,68 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 60 Kva Ip55",
-                        valor: " R$ 11.486,20 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 65 Kva Ip55",
-                        valor: " R$ 12.234,45 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 70 Kva Ip55",
-                        valor: " R$ 13.020,69 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 75 Kva Ip55",
-                        valor: " R$ 12.949,65 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 80 Kva Ip55",
-                        valor: " R$ 13.725,21 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 85 Kva Ip55",
-                        valor: " R$ 14.149,23 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 90 Kva Ip55",
-                        valor: " R$ 14.372,65 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 95 Kva Ip55",
-                        valor: " R$ 17.191,08 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 100 Kva Ip55",
-                        valor: " R$ 20.686,70 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 110 Kva Ip55",
-                        valor: " R$ 20.977,51 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 112,5kva Ip55",
-                        valor: " R$ 21.135,57 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 120 Kva Ip55",
-                        valor: " R$ 21.403,46 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 130 Kva Ip55",
-                        valor: " R$ 21.688,58 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 140 Kva Ip55",
-                        valor: " R$ 21.989,52 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 150 Kva Ip55",
-                        valor: " R$ 22.290,39 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 200 Kva Ip55",
-                        valor: " R$ 27.254,43 "
-                    },
-                    {
-                        descricao: "Auto Transformador Polux 300 Kva Ip55",
-                        valor: " R$ 45.418,88 "
-                    }
-                ]
-            }
-        ]
+        id: 4,
+        descricao: "Inversor Fronius Primo 5Kw Monof. 220V",
+        valor: 2399.95,
+        valorIndividual: 3068.51,
+        tipo: 2
+    },
+    {
+        id: 5,
+        descricao: "Inversor Fronius Primo 6Kw Monof. 220V",
+        valor: 2680.66,
+        valorIndividual: 3427.43,
+        tipo: 2
+    },
+    {
+        id: 6,
+        descricao: "Inversor Fronius Primo 8,2Kw Monof. 220V",
+        valor: 3525.18,
+        valorIndividual: 4507.21,
+        tipo: 2
+    },
+    {
+        id: 7,
+        descricao: "Inversor Fronius Symo BR 10Kw Trif. 220V",
+        valor: 13828.69,
+        valorIndividual: 17681.02,
+        tipo: 2
+    },
+    {
+        id: 8,
+        descricao: "Inversor Fronius Symo BR 12Kw Trif. 220V",
+        valor: 15444.26,
+        valorIndividual: 19746.66,
+        tipo: 2
+    },
+    {
+        id: 9,
+        descricao: "Inversor Fronius Symo BR 15Kw Trif. 220V",
+        valor: 14466.15,
+        valorIndividual: 18496.07,
+        tipo: 2
+    },
+    {
+        id: 10,
+        descricao: "Inversor Fronius Symo 12,5Kw Trif. 380V",
+        valor: 7927.72,
+        valorIndividual: 10136.19,
+        tipo: 2
+    },
+    {
+        id: 11,
+        descricao: "Inversor Fronius Symo 15Kw Trif. 380V",
+        valor: 8817.65,
+        valorIndividual: 11274.04,
+        tipo: 2
+    },
+    {
+        id: 12,
+        descricao: "Inversor Fronius Symo 17,5Kw Trif. 380V",
+        valor: 9302.01,
+        valorIndividual: 11893.33,
+        tipo: 2
+    },
+    {
+        id: 13,
+        descricao: "Inversor Fronius Symo 20Kw Trif. 380V",
+        valor: 9870.32,
+        valorIndividual: 12619.95,
+        tipo: 2
+    },
+    {
+        id: 14,
+        descricao: "Inversor Fronius Eco 25Kw Trif. 380V",
+        valor: 10962.76,
+        valorIndividual: 14016.72,
+        tipo: 2
+    },
+    {
+        id: 15,
+        descricao: "Inversor Fronius Eco Light 25Kw Trif. 380V",
+        valor: 10678.59,
+        valorIndividual: 13653.38,
+        tipo: 2
+    },
+    {
+        id: 16,
+        descricao: "Inversor Fronius Eco 27Kw Trif. 380V",
+        valor: 12025.74,
+        valorIndividual: 15375.81,
+        tipo: 2
+    },
+    {
+        id: 17,
+        descricao: "Inversor Fronius Eco Light 27Kw Trif. 380V",
+        valor: 11690.70,
+        valorIndividual: 14947.44,
+        tipo: 2
+    },
+    {
+        id: 18,
+        descricao: "Inversor Fronius Kit Eco 75Kw (Eco 25 + 2 Eco 25 Light)",
+        valor: 32319.93,
+        valorIndividual: 41323.48,
+        tipo: 2
+    },
+    {
+        id: 19,
+        descricao: "Inversor Fronius Tauro ECO 50-3-D Trif 380V",
+        valor: 30929.10,
+        valorIndividual: 39545.19,
+        tipo: 2
+    },
+    {
+        id: 20,
+        descricao: "Inversor Fronius Tauro ECO 50-3-P Trif 380V",
+        valor: 28792.75,
+        valorIndividual: 36813.70,
+        tipo: 2
+    },
+    {
+        id: 21,
+        descricao: "Inversor Fronius Tauro ECO 100-3-D Trif 380V",
+        valor: 42476.75,
+        valorIndividual: 54309.73,
+        tipo: 2
+    },
+    {
+        id: 22,
+        descricao: "Inversor Fronius Tauro ECO 100-3-P Trif 380V",
+        valor: 38502.26,
+        valorIndividual: 49228.05,
+        tipo: 2
+    },
+    {
+        id: 23,
+        descricao: "Inversor Fronius Primo GEN24 3.0 Plus Monf. 220V",
+        valor: 10334.17,
+        valorIndividual: 13213.02,
+        tipo: 2
+    },
+    {
+        id: 24,
+        descricao: "Inversor Fronius Primo GEN24 4.0 Plus Monf. 220V",
+        valor: 11111.24,
+        valorIndividual: 14206.57,
+        tipo: 2
+    },
+    {
+        id: 25,
+        descricao: "Inversor Fronius Primo GEN24 5.0 Plus Monf. 220V",
+        valor: 12549.98,
+        valorIndividual: 16046.10,
+        tipo: 2
+    },
+    {
+        id: 26,
+        descricao: "Inversor Fronius Primo GEN24 6.0 Plus Monf. 220V",
+        valor: 13931.44,
+        valorIndividual: 17812.40,
+        tipo: 2
+    },
+    {
+        id: 27,
+        descricao: "Carregador Veicular Fronius Wattpilot Home 11 J 2,0",
+        valor: 5780.92,
+        valorIndividual: 7391.34,
+        tipo: 4
+    },
+    {
+        id: 28,
+        descricao: "Cabo de carregado veicular Fronius Tipo 2 2,5m",
+        valor: 2035.76,
+        valorIndividual: 2602.88,
+        tipo: 4
+    },
+    {
+        id: 29,
+        descricao: "Cabo de carregado veicular Fronius Tipo 2 5m",
+        valor: 1813.60,
+        valorIndividual: 2318.82,
+        tipo: 4
+    },
+    {
+        id: 30,
+        descricao: "Cabo de carregado veicular Fronius  Tipo 2 7,5m",
+        valor: 2651.26,
+        valorIndividual: 3389.83,
+        tipo: 4
+    },
+    {
+        id: 31,
+        descricao: "Suporte cabo de carregado veicular Fronius (Type 2 wall bracket)",
+        valor: 465.02,
+        valorIndividual: 594.56,
+        tipo: 4
+    },
+    {
+        id: 32,
+        descricao: "Tagns RFID",
+        valor: 203.29,
+        valorIndividual: 259.92,
+        tipo: 4
+    },
+    {
+        id: 33,
+        descricao: "Mount Place Go 2,0",
+        valor: 213.27,
+        valorIndividual: 272.68,
+        tipo: 4
+    },
+    {
+        id: 34,
+        descricao: "Smart Meter Fronius 65A",
+        valor: 1526.37,
+        valorIndividual: 1951.59,
+        tipo: 4
+    },
+    {
+        id: 35,
+        descricao: "Smart Meter Fronius 5kA",
+        valor: 1526.37,
+        valorIndividual: 1951.59,
+        tipo: 4
+    },
+    {
+        id: 36,
+        descricao: "Inversor Sunways Monof. 220V STS-3KTL-3",
+        valor: 2514.52,
+        valorIndividual: 3215.00,
+        tipo: 2
+    },
+    {
+        id: 37,
+        descricao: "Inversor Sunways Monof. 220V STS-5KTL-P",
+        valor: 3944.79,
+        valorIndividual: 5043.71,
+        tipo: 2
+    },
+    {
+        id: 38,
+        descricao: "Inversor Sunways Monof. 220V STS-8KTL",
+        valor: 5421.20,
+        valorIndividual: 6931.42,
+        tipo: 2
+    },
+    {
+        id: 39,
+        descricao: "Inversor Sunways Monof. 220V STS-10KTL",
+        valor: 5767.24,
+        valorIndividual: 7373.85,
+        tipo: 2
+    },
+    {
+        id: 40,
+        descricao: "Inversor Sunways Trif. 380V STT-15KTL-P",
+        valor: 9112.23,
+        valorIndividual: 11650.68,
+        tipo: 2
+    },
+    {
+        id: 41,
+        descricao: "Inversor Sunways Trif. 380V STT-20KTL-P",
+        valor: 10611.72,
+        valorIndividual: 13567.88,
+        tipo: 2
+    },
+    {
+        id: 42,
+        descricao: "Inversor Sunways Trif. 380V STT-25KTL-P",
+        valor: 10957.75,
+        valorIndividual: 14010.31,
+        tipo: 2
+    },
+    {
+        id: 43,
+        descricao: "Inversor Sunways Trif. 380V STT-33KTL",
+        valor: 16148.26,
+        valorIndividual: 20646.77,
+        tipo: 2
+    },
+    {
+        id: 44,
+        descricao: "Inversor Sunways Trif. 380V STT-50KTL-M",
+        valor: 18455.16,
+        valorIndividual: 23596.31,
+        tipo: 2
+    },
+    {
+        id: 45,
+        descricao: "Inversor Sunways Trif. 380V STT-100KTL",
+        valor: 31719.80,
+        valorIndividual: 40556.16,
+        tipo: 2
+    },
+    {
+        id: 46,
+        descricao: "Inversor Sunways Trif. 380V STT-125KTL-HV",
+        valor: 34026.70,
+        valorIndividual: 43505.70,
+        tipo: 2
+    },
+    {
+        id: 47,
+        descricao: "Inversor Refusol Trif 380V 20Kw / Trif.220V 11kw",
+        valor: 10106.40,
+        valorIndividual: 12921.79,
+        tipo: 2
+    },
+    {
+        id: 48,
+        descricao: "Inversor Refusol Trif 380V 25Kw / Trif. 220V 13kv",
+        valor: 10435.95,
+        valorIndividual: 13343.15,
+        tipo: 2
+    },
+    {
+        id: 49,
+        descricao: "Inversor Refusol Trif 380V 33Kw / Trif. 220V 17,1Kw",
+        valor: 15379.30,
+        valorIndividual: 19663.59,
+        tipo: 2
+    },
+    {
+        id: 50,
+        descricao: "Inversor Refusol Trif 380V 50Kw / Trif. 220V 26KW",
+        valor: 17576.34,
+        valorIndividual: 22472.68,
+        tipo: 2
+    },
+    {
+        id: 51,
+        descricao: "Estrutura Romagnole  4 placas Pratic Lite Telha Ondulada",
+        valor: 191.33,
+        valorIndividual: null,
+        tipo: 3
+    },
+    {
+        id: 52,
+        descricao: "Estrutura Romagnole  4 placas Pratic Lite Telha Colonial",
+        valor: 284.93,
+        valorIndividual: null,
+        tipo: 3
+    },
+    {
+        id: 53,
+        descricao: "Estrutura Romagnole  4 placas Pratic Lite Perfil 2,4 (2pares)",
+        valor: 228.49,
+        valorIndividual: null,
+        tipo: 3
+    },
+    {
+        id: 54,
+        descricao: "Estrutura Romagnole  4 placas Pratic Lite Telha Metalica (perfil 55cm)",
+        valor: 192.71,
+        valorIndividual: null,
+        tipo: 3
+    },
+    {
+        id: 55,
+        descricao: "Estrutura Romagnole  4 placas Pratic Lite Lage",
+        valor: 663.46,
+        valorIndividual: null,
+        tipo: 3
+    },
+    {
+        id: 56,
+        descricao: "Cabo solar Cobrecon 4MM",
+        valor: 5.83,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 57,
+        descricao: "Cabo solar Cobrecom 6MM",
+        valor: 6.32,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 58,
+        descricao: "Conector MC-4 (Par)",
+        valor: 7.29,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 59,
+        descricao: "PV Fuse 15A 1000VDC",
+        valor: 14.12,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 60,
+        descricao: "PV Fuse 20A 1000VDC",
+        valor: 17.00,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 61,
+        descricao: "PV Fuse 30A 1000VDC",
+        valor: 28.91,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 62,
+        descricao: "String Box Clamper 1E/1S",
+        valor: 453.40,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 63,
+        descricao: "String Box Clamper 2E/1S",
+        valor: 518.17,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 64,
+        descricao: "String Box Clamper 2E/2S",
+        valor: 698.23,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 65,
+        descricao: "String Box Clamper 3E/1S",
+        valor: 712.48,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 66,
+        descricao: "String Box Clamper 3E/3S",
+        valor: 1198.27,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 67,
+        descricao: "String Box Clamper 4E/2S",
+        valor: 770.78,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 68,
+        descricao: "String Box Proauto 4E/4S",
+        valor: 1573.94,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 69,
+        descricao: "String Box Clamper 6E/2S",
+        valor: 1781.21,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 70,
+        descricao: "String Box Proauto 6/6S",
+        valor: 1434.53,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 71,
+        descricao: "String Box Proauto 8E/2S 2X50A 1005Vdc (para Tauro)",
+        valor: 1973.97,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 72,
+        descricao: "String Box Proauto 10E/10S",
+        valor: 2160.74,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 73,
+        descricao: "String Box Proauto 14E/1-2S 400A 1010Vdc (para Tauro)",
+        valor: 6136.07,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 74,
+        descricao: "String Box Proauto 20E/20S 10mppt 20A 1040VDC p/ Sunways 100 e 125",
+        valor: 4032.75,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 75,
+        descricao: "String Box Proauto 8-4E/8-4S 4mppt 20A p/ sunways 33 e 50",
+        valor: 2096.35,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 76,
+        descricao: "Auto Transformador POLUX 10 kVA IP23",
+        valor: 3147.15,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 77,
+        descricao: "Auto Transformador POLUX 15 kVA IP23",
+        valor: 3498.44,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 78,
+        descricao: "Auto Transformador POLUX 20 kVA IP23",
+        valor: 4556.95,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 79,
+        descricao: "Auto Transformador POLUX 25 kVA IP23",
+        valor: 5251.80,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 80,
+        descricao: "Auto Transformador POLUX 30 kVA IP23",
+        valor: 5513.61,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 81,
+        descricao: "Auto Transformador POLUX 35 kVA IP23",
+        valor: 5637.29,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 82,
+        descricao: "Auto Transformador POLUX 40 kVA IP23",
+        valor: 6378.77,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 83,
+        descricao: "Auto Transformador POLUX 45 kVA IP23",
+        valor: 6414.26,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 84,
+        descricao: "Auto Transformador POLUX 50 kVA IP23",
+        valor: 6622.26,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 85,
+        descricao: "Auto Transformador POLUX 55 kVA IP23",
+        valor: 8092.36,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 86,
+        descricao: "Auto Transformador POLUX 60 kVA IP23",
+        valor: 8354.19,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 87,
+        descricao: "Auto Transformador POLUX 65 kVA IP23",
+        valor: 8908.53,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 88,
+        descricao: "Auto Transformador POLUX 70 kVA IP23",
+        valor: 8879.90,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 89,
+        descricao: "Auto Transformador POLUX 75 kVA IP23",
+        valor: 9574.76,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 90,
+        descricao: "Auto Transformador POLUX 80 kVA IP23",
+        valor: 9606.68,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 91,
+        descricao: "Auto Transformador POLUX 85 kVA IP23",
+        valor: 10166.12,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 92,
+        descricao: "Auto Transformador POLUX 90 kVA IP23",
+        valor: 10617.79,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 93,
+        descricao: "Auto Transformador POLUX 95 kVA IP23",
+        valor: 11137.61,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 94,
+        descricao: "Auto Transformador POLUX 100 kVA IP23",
+        valor: 12387.38,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 95,
+        descricao: "Auto Transformador POLUX 110 kVA IP23",
+        valor: 12733.53,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 96,
+        descricao: "Auto Transformador POLUX 112,5kVA IP23",
+        valor: 12891.85,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 97,
+        descricao: "Auto Transformador POLUX 120 kVA IP23",
+        valor: 13206.82,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 98,
+        descricao: "Auto Transformador POLUX 130 kVA IP23",
+        valor: 14494.51,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 99,
+        descricao: "Auto Transformador POLUX 140 kVA IP23",
+        valor: 15707.69,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 100,
+        descricao: "Auto Transformador POLUX 150 kVA IP23",
+        valor: 16359.86,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 101,
+        descricao: "Auto Transformador POLUX 200 kVA IP23",
+        valor: 19803.37,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 102,
+        descricao: "Auto Transformador POLUX 300 kVA IP23",
+        valor: 28317.84,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 103,
+        descricao: "Auto Transformador POLUX 10 kVA IP55",
+        valor: 4006.87,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 104,
+        descricao: "Auto Transformador POLUX 15 kVA IP55",
+        valor: 4595.13,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 105,
+        descricao: "Auto Transformador POLUX 20 kVA IP55",
+        valor: 5490.84,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 106,
+        descricao: "Auto Transformador POLUX 25 kVA IP55",
+        valor: 5822.13,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 107,
+        descricao: "Auto Transformador POLUX 30 kVA IP55",
+        valor: 6257.27,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 108,
+        descricao: "Auto Transformador POLUX 35 kVA IP55",
+        valor: 8632.66,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 109,
+        descricao: "Auto Transformador POLUX 40 kVA IP55",
+        valor: 10343.41,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 110,
+        descricao: "Auto Transformador POLUX 45 kVA IP55",
+        valor: 10817.57,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 111,
+        descricao: "Auto Transformador POLUX 50 kVA IP55",
+        valor: 11197.64,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 112,
+        descricao: "Auto Transformador POLUX 55 kVA IP55",
+        valor: 11523.68,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 113,
+        descricao: "Auto Transformador POLUX 60 kVA IP55",
+        valor: 11486.20,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 114,
+        descricao: "Auto Transformador POLUX 65 kVA IP55",
+        valor: 12234.45,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 115,
+        descricao: "Auto Transformador POLUX 70 kVA IP55",
+        valor: 13020.69,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 116,
+        descricao: "Auto Transformador POLUX 75 kVA IP55",
+        valor: 12949.65,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 117,
+        descricao: "Auto Transformador POLUX 80 kVA IP55",
+        valor: 13725.21,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 118,
+        descricao: "Auto Transformador POLUX 85 kVA IP55",
+        valor: 14149.23,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 119,
+        descricao: "Auto Transformador POLUX 90 kVA IP55",
+        valor: 14372.65,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 120,
+        descricao: "Auto Transformador POLUX 95 kVA IP55",
+        valor: 17191.08,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 121,
+        descricao: "Auto Transformador POLUX 100 kVA IP55",
+        valor: 20686.70,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 122,
+        descricao: "Auto Transformador POLUX 110 kVA IP55",
+        valor: 20977.51,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 123,
+        descricao: "Auto Transformador POLUX 112,5kVA IP55",
+        valor: 21135.57,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 124,
+        descricao: "Auto Transformador POLUX 120 kVA IP55",
+        valor: 21403.46,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 125,
+        descricao: "Auto Transformador POLUX 130 kVA IP55",
+        valor: 21688.58,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 126,
+        descricao: "Auto Transformador POLUX 140 kVA IP55",
+        valor: 21989.52,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 127,
+        descricao: "Auto Transformador POLUX 150 kVA IP55",
+        valor: 22290.39,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 128,
+        descricao: "Auto Transformador POLUX 200 kVA IP55",
+        valor: 27254.43,
+        valorIndividual: null,
+        tipo: 4
+    },
+    {
+        id: 129,
+        descricao: "Auto Transformador POLUX 300 kVA IP55",
+        valor: 45418.88,
+        valorIndividual: null,
+        tipo: 4
     }
 ]
+module.exports = products
