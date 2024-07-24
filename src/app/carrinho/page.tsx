@@ -102,7 +102,8 @@ export default function Carrinho() {
                     </TableBody>
                     <TableFooter>
                         <TableRow>
-                            <TableCell colSpan={2}>Total</TableCell>
+                            <TableCell>Total</TableCell>
+                            <TableCell className="text-right">{carrinhoCompras.length} item(s)</TableCell>
                             <TableCell className="text-right font-bold">{formataValorEmRealBrasileiro(valorTotalIndividual)}</TableCell>
                             <TableCell className="text-right font-bold">{formataValorEmRealBrasileiro(valorTotal)}</TableCell>
                             <TableCell className="text-right">

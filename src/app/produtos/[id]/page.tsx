@@ -17,16 +17,16 @@ export default function Produtos() {
     };
 
     return (
-        <main>
+        <main className='flex flex-col items-center justify-center'>
             <div className="header w-screen h-12 p-2 text-white font-bold bg-sky-800 flex items-center">
                 Solar Shop
             </div>
-            <div className="link-voltar flex-1 w-1/2 p-2">
+            <div className="link-voltar flex-1 w-1/2 p-2 justify-center">
                 <a href="/" className='hover:text-blue-700 hover:font-bold'>{'<-'} Voltar</a>
             </div>
             <div className="produto-detalhe flex items-center justify-center m-4">
                 <div className="produto-foto">
-                    <img src={getFoto(produto?.descricao)} alt="Imagem Produto" />
+                    <img className="w-1/2" src={getFoto(produto?.descricao)} alt="Imagem Produto" />
                 </div>
                 <div className="produto-detalhes">
 

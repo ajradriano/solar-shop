@@ -19,6 +19,17 @@ export function getFoto(descricao: string): string {
   return '/nope-img.jpg';
 }
 
+export function getTipo(id: number) {
+  const tipos = [
+    { id: 1, descricao: 'Módulos' },
+    { id: 2, descricao: 'Inversores' },
+    { id: 3, descricao: 'Estruturas' },
+    { id: 4, descricao: 'Elétricos' }
+  ];
+  const tipo = tipos.find(tipo => tipo.id === id);
+  return tipo ? tipo.descricao : undefined;
+}
+
 export function formataValorEmRealBrasileiro(valor: any) {
   return valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 }

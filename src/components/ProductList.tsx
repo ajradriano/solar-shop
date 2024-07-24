@@ -5,7 +5,7 @@ import {
     CardFooter,
     CardHeader,
 } from "@/components/ui/card";
-import { formataValorEmRealBrasileiro } from '@/app/utils';
+import { formataValorEmRealBrasileiro, getTipo } from '@/app/utils';
 
 interface Produto {
     id: number;
@@ -24,7 +24,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ tiposProduto, produtos, filtroTexto, getFoto }) => {
     return (
-        <div className="product-list w-full flex-col items-center gap-2 p-4">
+        <div className="product-list w-3/4 flex-col items-center gap-2 p-4">
             <div className="bloco-produtos">
                 <div>
                     {tiposProduto.map(item => (
@@ -45,8 +45,11 @@ const ProductList: React.FC<ProductListProps> = ({ tiposProduto, produtos, filtr
                                                                 src={getFoto(produtoFiltrado.descricao)}
                                                                 alt="Image" />
                                                         </CardHeader>
-                                                        <CardContent className="text-blue-950 text-xl">
+                                                        <CardContent>
+                                                            <p className="descricao text-blue-950 text-xl">
                                                             {produtoFiltrado.descricao}
+                                                            </p>
+                                                            <span>{getTipo(produtoFiltrado.tipo)}</span>
                                                         </CardContent>
                                                         <CardFooter className="flex-col gap-1 items-center justify-center">
                                                             <div className="font-semibold text-xl text-center">
