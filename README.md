@@ -1,40 +1,58 @@
 # Solar Shop
 Solar Shop é um projeto de teste técnico para avaliação de capacidade profissional.
 
+*Teste Técnico para Desenvolvedor Web*
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+*Objetivo:* 
+Desenvolver uma loja ou catálogo online de produtos de energia solar utilizando Next.js e Tailwind CSS. O projeto deverá incluir funcionalidades de filtragem de produtos e um sistema de carrinho de compras.
 
-## Getting Started
+*Descrição da Tarefa:*
 
-First, run the development server:
+1. *Página Inicial:*
+   - Exibir uma listagem de produtos de energia solar.
+   - Cada produto deve exibir o nome, imagem, tipo e preço.
+
+2. *Filtros de Produtos:*
+   - *Input de Nome:* Permitir que o usuário pesquise produtos pelo nome.
+   - *Select de Tipo:* Permitir que o usuário filtre os produtos pelo tipo, com as seguintes opções: Inversores, Módulos, Estruturas, Elétricos.
+
+3. *Detalhes dos Produtos:*
+   - Ao clicar em um produto, deve ser exibida uma página com mais detalhes do produto.
+
+4. *Carrinho de Compras:*
+   - Possibilitar a adição de produtos ao carrinho.
+   - Exibir o resumo do carrinho com a quantidade de itens e o valor total.
+   - Permitir a remoção de produtos do carrinho.
+
+5. *Pedido:*
+   - Criar uma página para revisão do pedido com os produtos selecionados e seus respectivos valores.
+
+*Requisitos Técnicos:*
+- Utilizar *Next.js* para a criação da aplicação.
+- Utilizar *Tailwind CSS* para estilização.
+- Utilizar o estado local para gerenciamento do carrinho de compras.
+
+
+## Como rodar o projeto
+
+Primeiramente, certifique-se de que tenha instalado em sua máquina o NodeJs v.18+;
+
+Execute os comandos a seguir para instalar as dependencias da aplicação:
+
+```bash
+npm instal
+# ou
+npm i
+```
+
+Para executar a aplicação, no terminal, execute o comando a seguir:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Caso encontre o erro: `'next' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.`, execute o comando `
+npm install -g next
+` e, após a instalação, execute novamente `npm run dev`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Acesse a aplicação do seu navegador pelo http://localhost:[numero-da-porta]
